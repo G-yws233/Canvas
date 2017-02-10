@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas绘图</title>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<canvas id="can" width=500 height=500>
+		您的浏览器版本太低，请升级到最新版本。
+	</canvas>
+	<canvas id="cans" width=500 height=500>
+		您的浏览器版本太低，请升级到最新版本。
+	</canvas>
+	<canvas id="secondcans" width=500 height=500>
+		您的浏览器版本太低，请升级到最新版本。
+	</canvas>
+	<canvas id="secondcan" width=500 height=500>
+		您的浏览器版本太低，请升级到最新版本。
+	</canvas>
+</body>
+<script>
+	//填充矩形 
+	var can=document.querySelector("#can");
+	var o=can.getContext("2d");
+	console.dir(can);
+	console.dir(o);
+	o.fillStyle="rgba(0,255,0,0.6)";
+	o.fillRect(0,0,200,200);
+	o.fillStyle="rgba(255,0,0,0.6)";
+	o.fillRect(100,100,200,200);
+	o.fillStyle="rgba(0,255,0,0.6)";
+	o.fillRect(200,200,200,200);
+	o.fillStyle="rgba(255,0,0,0.6)";
+	o.fillRect(300,300,200,200);
+
+	o.fillStyle="rgba(0,0,0,0.6)";
+	o.fillRect(300,0,200,200);
+	o.fillStyle="rgba(0,0,255,0.6)";
+	o.fillRect(200,100,200,200);
+	o.fillStyle="rgba(0,0,0,0.6)";
+	o.fillRect(100,200,200,200);
+	o.fillStyle="rgba(0,0,255,0.6)";
+	o.fillRect(0,300,200,200);
+
+	// 第二种方法
+	var secondcan=document.querySelector("#secondcan");
+	var secondo=secondcan.getContext("2d");
+	secondo.rect(0,0,200,200);
+	secondo.fill();
+	secondo.rect(100,100,200,200);
+	secondo.fill();
+	secondo.rect(200,200,200,200);
+	secondo.fill();
+	secondo.rect(300,300,200,200);
+
+	secondo.fill()
+	secondo.rect(300,0,200,200);
+	secondo.fill();
+	secondo.rect(200,100,200,200);
+	secondo.fill()
+	secondo.rect(100,200,200,200);
+	secondo.fill();
+	secondo.rect(0,300,200,200);
+	secondo.fill();
+
+
+	// 描边矩形
+	var cans=document.querySelector("#cans");
+	var d=cans.getContext("2d");
+	d.strokeStyle="rgba(0,255,0,1)";
+	d.strokeRect(0,0,200,200);
+	d.strokeStyle="rgba(255,0,0,1)";
+	d.strokeRect(100,100,200,200);
+	d.strokeStyle="rgba(0,255,0,1)";
+	d.strokeRect(200,200,200,200);
+	d.strokeStyle="rgba(255,0,0,1)";
+	d.strokeRect(300,300,200,200);
+
+	d.strokeStyle="rgba(0,0,0,1)";
+	d.strokeRect(300,0,200,200);
+	d.strokeStyle="rgba(0,0,255,1)";
+	d.strokeRect(200,100,200,200);
+	d.strokeStyle="rgba(0,0,0,1)";
+	d.strokeRect(100,200,200,200);
+	d.strokeStyle="rgba(0,0,255,1)";
+	d.strokeRect(0,300,200,200);
+
+	//第二种描边矩形
+	var secondcans=document.querySelector("#secondcans");
+	var secondd=secondcans.getContext("2d");
+	secondd.rect(0,0,200,200);
+	secondd.stroke();
+	secondd.rect(100,100,200,200);
+	secondd.stroke();
+	secondd.rect(200,200,200,200);
+	secondd.stroke();
+	secondd.rect(300,300,200,200);
+
+	secondd.stroke();
+	secondd.rect(300,0,200,200);
+	secondd.stroke();
+	secondd.rect(200,100,200,200);
+	secondd.stroke();
+	secondd.rect(100,200,200,200);
+	secondd.stroke();
+	secondd.rect(0,300,200,200);
+	secondd.stroke();
+</script>
+</html>
